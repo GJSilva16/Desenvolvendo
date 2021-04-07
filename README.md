@@ -1,4 +1,4 @@
-# Desenvolvendo
+# Executando
 
 Ao executar o código abrirá uma tela com campos usuário e senha, e com botões entrar e cadastrar, 
 se o usuário estiver cadastrado basta digitar o usuário e a senha e clicar em entrar, caso contrario
