@@ -1,5 +1,5 @@
 # Desenvolvendo
-Desenvolvido em desafios e cursos /n
+
 Ao executar o código abrirá uma tela com campos usuário e senha, e com botões entrar e cadastrar, 
 se o usuário estiver cadastrado basta digitar o usuário e a senha e clicar em entrar, caso contrario
 o usuário clica em cadastrar que abrirá uma nova tela onde ele digitará seus dados preenchendo todos 
