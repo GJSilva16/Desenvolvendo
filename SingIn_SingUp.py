@@ -30,8 +30,8 @@ class tela:
         self.telaInicial.mainloop()
 
     # Função de acesso aos dados no banco, verificação de usuario e senha, chama a função "Logado" que abre uma tela
-    # com a menssagem "Usuario logado com sucesso!" e fecha a tela de login se o usuario e senha estiverem corretos,
-    # se não estiverem chama a fução "Erro" que abre uma tela com a menssagem "dados estão incorretos!".
+    # com a mensagem "Usuario logado com sucesso!" e fecha a tela de login se o usuario e senha estiverem corretos,
+    # se não estiverem chama a fução "Erro" que abre uma tela com a mensagem "dados estão incorretos!".
     # Chamada no botão "Entrar" na tela de login na função "__init__".
     def Verificar(self):
 
@@ -60,7 +60,7 @@ class tela:
         self.telaInicial.destroy()
         self.Cadastrar()
 
-    # Função que chama a tela com a menssagem "Usuario logado com sucesso!".
+    # Função que chama a tela com a mensagem "Usuario logado com sucesso!".
     # Chamada na função "Verificar" se o usuario e senha estiverem corretos.
     def Logado(self):
 
@@ -74,7 +74,7 @@ class tela:
         self.botaoEncerrar = Button(self.telaLogado, text='OK', bd=3, command=self.Terminar)
         self.botaoEncerrar.place(x=120, y=60)
 
-    # Função que abre uma tela com a menssagem "Os dados inseridos estão incorretos!".
+    # Função que abre uma tela com a mensagem "Os dados inseridos estão incorretos!".
     # Chamada na função "Verificar" se o usuario e senha não estiverem corretos.
     def Erro(self):
 
@@ -88,7 +88,7 @@ class tela:
         self.botaoEncerrar1 = Button(self.telaErro, text='OK', bd=3, command=self.Retornar)
         self.botaoEncerrar1.place(x=120, y=50)
 
-    # Função abre uma tela com a menssagem "Usuario não cadastrado!".
+    # Função abre uma tela com a mensagem "Usuario não cadastrado!".
     # Chamada na função "NovoUsuario", se o usuario não estiver cadastrado.
     def SemCadastro(self):
 
@@ -102,22 +102,22 @@ class tela:
         self.botaoCadastrar1 = Button(self.telaErroCadastro, text='Cadastrar', bd=3, command=self.Cadastro)
         self.botaoCadastrar1.place(x=150, y=50)
 
-    # Função que fecha a tela com a menssagem "Login efetuado com sucesso!".
+    # Função que fecha a tela com a mensagem "Login efetuado com sucesso!".
     # Chamada no botão "OK" da mesma tela na função "Logado".
     # Finaliza o processo.
     def Terminar(self):
 
         self.telaLogado.destroy()
 
-    # Função que fecha a tela com a menssagem "Os dados inseridos estão incorretos!" e chama a função "__init__" que
+    # Função que fecha a tela com a mensagem "Os dados inseridos estão incorretos!" e chama a função "__init__" que
     # abre a tela para login.
-    # Chamada no botão "OK" da tela com a menssagem "Os dados inseridos estão incorretos!" na função "Erro".
+    # Chamada no botão "OK" da tela com a mensagem "Os dados inseridos estão incorretos!" na função "Erro".
     def Retornar(self):
 
         self.telaErro.destroy()
         self.__init__()
 
-    # Função que fecha a tela de login e chama a função "SemCadastro" que abre uma tela com a menssagem "Usuario não
+    # Função que fecha a tela de login e chama a função "SemCadastro" que abre uma tela com a mensagem "Usuario não
     # cadastrado. Por favor, efetue o cadastro!"
     # Chamada na função "Verificar", se os dados não forem encontrados no banco.
     def NovoUsuario(self):
@@ -125,9 +125,9 @@ class tela:
         self.telaInicial.destroy()
         self.SemCadastro()
 
-    # Função que fecha a tela com a menssagem "Usuario não cadastrado. Por favor, efetue o cadastro!" e chama a função
+    # Função que fecha a tela com a mensagem "Usuario não cadastrado. Por favor, efetue o cadastro!" e chama a função
     # "Cadastrar" que abre uma tela para o cadastro dos dados do usuario.
-    # Chamada no botão "Cadastrar" da tela com a menssagem "Usuario não cadastrado. Por favor, efetue o cadastro!" na
+    # Chamada no botão "Cadastrar" da tela com a mensagem "Usuario não cadastrado. Por favor, efetue o cadastro!" na
     # função "SemCadastro"
     def Cadastro(self):
 
@@ -212,7 +212,7 @@ class tela:
         self.telaCadastro.destroy()
         self.CadastroSucesso()
 
-    # Função verifica se o campo esta vazio, se estiver chama a função "ErroVazio" que abre uma tela com a menssagem
+    # Função verifica se o campo esta vazio, se estiver chama a função "ErroVazio" que abre uma tela com a mensagem
     # "Por favor, preencha todos os campos!", se não chama a função "Salvar" que cria caso não exista e conecta o banco
     # de dados. Cria a tabela caso não exista e insere os valores digitados na tela de cadastro função "Cadastrar".
     # Chamada no botaõ "OK" da tela de cadastro função "Cadastrar".
@@ -224,7 +224,7 @@ class tela:
         else:
             self.Salvar()
 
-    # Função que abre uma tela com a menssagem "Cadastro efetuado com sucesso!".
+    # Função que abre uma tela com a mensagem "Cadastro efetuado com sucesso!".
     # Chamada pela função "Salvar" que cria o banco de dados caso não exista e conecta com esse banco de dados. Cria a tabela caso não exista e insere os valores
     # digitados na tela de cadastro função "Cadastrar".
     def CadastroSucesso(self):
@@ -239,15 +239,15 @@ class tela:
         self.botaoConfirmar = Button(self.telaCadastroSucesso, text='OK', bd=3, command=self.PosCadastro)
         self.botaoConfirmar.place(x=120, y=50)
 
-    # Função que fecha a tela com a menssagem "Cadastro efetuado com sucesso!" função "CadastroSucesso" e chama a função
+    # Função que fecha a tela com a mensagem "Cadastro efetuado com sucesso!" função "CadastroSucesso" e chama a função
     # "__init__" que abre a tela login.
-    # Chamada no botão "OK" da tela com a menssagem "Cadastro efetuado com sucesso!" função "CadastroSucesso".
+    # Chamada no botão "OK" da tela com a mensagem "Cadastro efetuado com sucesso!" função "CadastroSucesso".
     def PosCadastro(self):
 
         self.telaCadastroSucesso.destroy()
         self.__init__()
 
-    # Função que abre a tela com a menssagem "Por favor, preencha todos os campos!".
+    # Função que abre a tela com a mensagem "Por favor, preencha todos os campos!".
     # Chamada na função "VerificarCampo" se o usuario deixar algum campo em branco.
     def ErroVazio(self):
 
@@ -261,7 +261,7 @@ class tela:
         self.botaoCadastrar2 = Button(self.telaErroVazio, text='OK', bd=3, command=self.RetornarCadastro)
         self.botaoCadastrar2.place(x=120, y=50)
 
-    # Função que fecha a tela com a menssagem "Por favor, preencha todos os campos!" função "ErroVazio".
+    # Função que fecha a tela com a mensagem "Por favor, preencha todos os campos!" função "ErroVazio".
     # Chamada no botão "OK" da mesma tela.
     def RetornarCadastro(self):
 
